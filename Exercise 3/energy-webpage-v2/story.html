@@ -8,6 +8,10 @@
 </head>
 <body>
 
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="scroll-progress"></div>
+  </div>
+
   <header>
     <nav>
       <a href="index.html" class="logo">
@@ -48,6 +52,17 @@
           TV, without realising how much size alone can drive up yearly
           electricity use.
         </p>
+      </div>
+    </section>
+
+    <section class="estimator-card reveal">
+      <span class="story-tag">Try It Yourself</span>
+      <h3>Estimate energy use by screen size</h3>
+      <p>Drag the slider to see roughly how much energy a TV of that size uses per year.</p>
+      <input type="range" id="size-slider" min="20" max="85" value="43">
+      <div class="estimator-result">
+        <span id="size-output">43"</span> TV ≈
+        <span id="energy-output">155</span> kWh/year
       </div>
     </section>
 
@@ -157,6 +172,10 @@
     </div>
 
   </main>
+
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Enlarged chart">
+  </div>
 
   <footer>
     <p>&copy; <span id="year"></span> Terence Loo Wen Xuan. Built with the assistance of Generative AI (Claude) for structuring and drafting content.</p>

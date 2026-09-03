@@ -339,3 +339,83 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* Scroll progress bar */
+.progress-bar-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 200;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: var(--warm);
+  transition: width 0.1s ease-out;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 61, 62, 0.85);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 2rem;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Interactive estimator */
+.estimator-card {
+  background-color: var(--surface);
+  border-radius: 14px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 16px rgba(15, 61, 62, 0.06);
+  text-align: center;
+}
+
+.estimator-card h3 {
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.estimator-card p {
+  color: var(--text-soft);
+  margin-bottom: 1.5rem;
+}
+
+.estimator-card input[type="range"] {
+  width: 80%;
+  max-width: 400px;
+  accent-color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.estimator-result {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.estimator-result #size-output,
+.estimator-result #energy-output {
+  color: var(--accent);
+}
