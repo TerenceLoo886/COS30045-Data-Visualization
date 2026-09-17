@@ -141,7 +141,7 @@
           <rect x="85" y="150" width="40" height="80" fill="#8B0000" />
           <rect x="20" y="110" width="40" height="40" fill="#AEDFF7" stroke="#333" stroke-width="2" />
           <rect x="140" y="110" width="40" height="40" fill="#AEDFF7" stroke="#333" stroke-width="2" />
-          <path d="M 100 230 C 60 270, 20 290, 45 320" stroke="#999" stroke-width="26" fill="none" stroke-linecap="round" />    
+          <path d="M 100 230 L 50 320" stroke="#999" stroke-width="26" fill="none" stroke-linecap="round" />
         </g>
       </svg>
     </div>
@@ -154,8 +154,9 @@
       Between the original and edited version, the house roof colour was changed from red to
       blue, the door was darkened to a deep red, and the tree was shifted slightly and coloured
       a deeper green. The sun was made smaller and moved to a new position in the sky, and the
-      house group itself was repositioned. The walkway was also made noticeably thicker and redrawn with a stronger curve, 
-      giving it a more winding, natural path toward the house instead of a nearly straight line.
+      house group itself was repositioned. The walkway was also changed from a curved path in
+      the original to a straight diagonal path in the edited version, and made noticeably
+      thicker.
     </p>
   </div>
 
@@ -216,8 +217,8 @@
       <tr>
         <td>Path to house (&lt;path&gt;)</td>
         <td>d, stroke-width</td>
-        <td>M 100 230 Q 90 280 60 320, width 20</td>
-        <td>M 100 230 C 60 270, 20 290, 45 320, width 26</td>    
+        <td>M 100 230 Q 90 280 60 320, width 20 (curved)</td>
+        <td>M 100 230 L 50 320, width 26 (straight)</td>
       </tr>
     </tbody>
   </table>
