@@ -6,11 +6,14 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+    .compare-row {
       display: flex;
       gap: 40px;
       justify-content: center;
-      padding: 30px;
-      background-color: #f4f4f4;
+      margin-bottom: 40px;
     }
     .panel {
       text-align: center;
@@ -23,63 +26,134 @@
       border: 1px solid #ccc;
       background-color: #fff;
     }
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      background-color: #fff;
+      min-width: 600px;
+    }
+    caption {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px 16px;
+      text-align: left;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ORIGINAL VERSION -->
-  <div class="panel">
-    <h2>Original</h2>
-    <svg width="500" height="375" viewBox="0 0 600 450">
-      <rect x="0" y="0" width="600" height="450" fill="#87CEEB" />
-      <circle cx="500" cy="80" r="40" fill="#FFD700" />
-      <rect x="0" y="320" width="600" height="130" fill="#4CAF50" />
+  <div class="compare-row">
+    <!-- ORIGINAL VERSION -->
+    <div class="panel">
+      <h2>Original</h2>
+      <svg width="500" height="375" viewBox="0 0 600 450">
+        <rect x="0" y="0" width="600" height="450" fill="#87CEEB" />
+        <circle cx="500" cy="80" r="40" fill="#FFD700" />
+        <rect x="0" y="320" width="600" height="130" fill="#4CAF50" />
 
-      <g transform="translate(100, 260)">
-        <rect x="-8" y="40" width="16" height="60" fill="#8B4513" />
-        <ellipse cx="0" cy="20" rx="45" ry="45" fill="#2E7D32" />
-      </g>
+        <g transform="translate(100, 260)">
+          <rect x="-8" y="40" width="16" height="60" fill="#8B4513" />
+          <ellipse cx="0" cy="20" rx="45" ry="45" fill="#2E7D32" />
+        </g>
 
-      <g transform="translate(250, 150)">
-        <rect x="0" y="80" width="200" height="150" fill="#A0522D" stroke="#5C3317" stroke-width="2" />
-        <path d="M -20 80 L 100 -20 L 220 80 Z" fill="#B7410E" stroke="#5C3317" stroke-width="2" />
-        <rect x="85" y="150" width="40" height="80" fill="#5C3317" />
-        <circle cx="115" cy="190" r="3" fill="#FFD700" />
-        <rect x="20" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
-        <rect x="140" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
-        <path d="M 100 230 Q 90 280 60 320" stroke="#DDD" stroke-width="20" fill="none" />
-      </g>
+        <g transform="translate(250, 150)">
+          <rect x="0" y="80" width="200" height="150" fill="#A0522D" stroke="#5C3317" stroke-width="2" />
+          <path d="M -20 80 L 100 -20 L 220 80 Z" fill="#B7410E" stroke="#5C3317" stroke-width="2" />
+          <rect x="85" y="150" width="40" height="80" fill="#5C3317" />
+          <circle cx="115" cy="190" r="3" fill="#FFD700" />
+          <rect x="20" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
+          <rect x="140" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
+          <path d="M 100 230 Q 90 280 60 320" stroke="#DDD" stroke-width="20" fill="none" />
+        </g>
 
-      <text x="470" y="250" font-family="Arial" font-size="20" fill="#000000">House</text>
-    </svg>
+        <text x="470" y="250" font-family="Arial" font-size="20" fill="#000000">House</text>
+      </svg>
+    </div>
+
+    <!-- EDITED VERSION -->
+    <div class="panel">
+      <h2>Edited</h2>
+      <svg width="500" height="375" viewBox="0 0 600 450">
+        <rect x="0" y="0" width="600" height="450" fill="#87CEEB" />
+        <circle cx="450" cy="60" r="35" fill="#FFD700" />
+        <rect x="0" y="320" width="600" height="130" fill="#4CAF50" />
+
+        <g transform="translate(100, 260)">
+          <rect x="-8" y="40" width="16" height="60" fill="#8B4513" />
+          <ellipse cx="0" cy="20" rx="45" ry="45" fill="#388E3C" />
+        </g>
+
+        <g transform="translate(250, 150)">
+          <rect x="0" y="80" width="200" height="150" fill="#A0522D" stroke="#5C3317" stroke-width="2" />
+          <path d="M -20 80 L 100 -20 L 220 80 Z" fill="#8B0000" stroke="#5C3317" stroke-width="2" />
+          <rect x="85" y="150" width="40" height="80" fill="#3E2723" />
+          <circle cx="115" cy="190" r="3" fill="#FFD700" />
+          <rect x="20" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
+          <rect x="140" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
+          <path d="M 100 230 Q 90 280 60 320" stroke="#DDD" stroke-width="20" fill="none" />
+        </g>
+
+        <text x="470" y="250" font-family="Arial" font-size="20" fill="#000000">House</text>
+      </svg>
+    </div>
   </div>
 
-  <!-- EDITED VERSION -->
-  <div class="panel">
-    <h2>Edited</h2>
-    <svg width="500" height="375" viewBox="0 0 600 450">
-      <rect x="0" y="0" width="600" height="450" fill="#87CEEB" />
-      <circle cx="450" cy="60" r="35" fill="#FFD700" />
-      <rect x="0" y="320" width="600" height="130" fill="#4CAF50" />
-
-      <g transform="translate(100, 260)">
-        <rect x="-8" y="40" width="16" height="60" fill="#8B4513" />
-        <ellipse cx="0" cy="20" rx="45" ry="45" fill="#388E3C" />
-      </g>
-
-      <g transform="translate(250, 150)">
-        <rect x="0" y="80" width="200" height="150" fill="#A0522D" stroke="#5C3317" stroke-width="2" />
-        <path d="M -20 80 L 100 -20 L 220 80 Z" fill="#8B0000" stroke="#5C3317" stroke-width="2" />
-        <rect x="85" y="150" width="40" height="80" fill="#3E2723" />
-        <circle cx="115" cy="190" r="3" fill="#FFD700" />
-        <rect x="20" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
-        <rect x="140" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
-        <path d="M 100 230 Q 90 280 60 320" stroke="#DDD" stroke-width="20" fill="none" />
-      </g>
-
-      <text x="470" y="250" font-family="Arial" font-size="20" fill="#000000">House</text>
-    </svg>
-  </div>
+  <!-- CHANGE LOG TABLE -->
+  <table>
+    <caption>Summary of Changes</caption>
+    <thead>
+      <tr>
+        <th>Element</th>
+        <th>Attribute</th>
+        <th>Original Value</th>
+        <th>New Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sun (&lt;circle&gt;)</td>
+        <td>cx, cy</td>
+        <td>500, 80</td>
+        <td>450, 60</td>
+      </tr>
+      <tr>
+        <td>Sun (&lt;circle&gt;)</td>
+        <td>r</td>
+        <td>40</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>Roof (&lt;path&gt;)</td>
+        <td>fill</td>
+        <td>#B7410E</td>
+        <td>#8B0000</td>
+      </tr>
+      <tr>
+        <td>Door (&lt;rect&gt;)</td>
+        <td>fill</td>
+        <td>#5C3317</td>
+        <td>#3E2723</td>
+      </tr>
+      <tr>
+        <td>Tree (&lt;ellipse&gt;)</td>
+        <td>fill</td>
+        <td>#2E7D32</td>
+        <td>#388E3C</td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>
