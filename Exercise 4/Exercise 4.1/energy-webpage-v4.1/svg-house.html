@@ -2,49 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Exercise 4.1 - SVG House</title>
+  <title>Exercise 4.1 - SVG House Comparison</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+    .panel {
+      text-align: center;
+    }
+    .panel h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    svg {
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+  </style>
 </head>
 <body>
 
-  <svg width="600" height="450" viewBox="0 0 600 450">
-    <!-- Sky background -->
-    <rect x="0" y="0" width="600" height="450" fill="#87CEEB" />
+  <!-- ORIGINAL VERSION -->
+  <div class="panel">
+    <h2>Original</h2>
+    <svg width="500" height="375" viewBox="0 0 600 450">
+      <rect x="0" y="0" width="600" height="450" fill="#87CEEB" />
+      <circle cx="500" cy="80" r="40" fill="#FFD700" />
+      <rect x="0" y="320" width="600" height="130" fill="#4CAF50" />
 
-    <!-- Sun -->
-    <circle cx="500" cy="80" r="40" fill="#FFD700" />
+      <g transform="translate(100, 260)">
+        <rect x="-8" y="40" width="16" height="60" fill="#8B4513" />
+        <ellipse cx="0" cy="20" rx="45" ry="45" fill="#2E7D32" />
+      </g>
 
-    <!-- Ground -->
-    <rect x="0" y="320" width="600" height="130" fill="#4CAF50" />
+      <g transform="translate(250, 150)">
+        <rect x="0" y="80" width="200" height="150" fill="#A0522D" stroke="#5C3317" stroke-width="2" />
+        <path d="M -20 80 L 100 -20 L 220 80 Z" fill="#B7410E" stroke="#5C3317" stroke-width="2" />
+        <rect x="85" y="150" width="40" height="80" fill="#5C3317" />
+        <circle cx="115" cy="190" r="3" fill="#FFD700" />
+        <rect x="20" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
+        <rect x="140" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
+        <path d="M 100 230 Q 90 280 60 320" stroke="#DDD" stroke-width="20" fill="none" />
+      </g>
 
-    <!-- Tree group (grouping + transform) -->
-    <g transform="translate(100, 260)">
-      <rect x="-8" y="40" width="16" height="60" fill="#8B4513" />
-      <ellipse cx="0" cy="20" rx="45" ry="45" fill="#2E7D32" />
-    </g>
+      <text x="470" y="250" font-family="Arial" font-size="20" fill="#000000">House</text>
+    </svg>
+  </div>
 
-    <!-- House group (grouping + transform) -->
-    <g transform="translate(250, 150)">
-      <!-- House body -->
-      <rect x="0" y="80" width="200" height="150" fill="#A0522D" stroke="#5C3317" stroke-width="2" />
+  <!-- EDITED VERSION -->
+  <div class="panel">
+    <h2>Edited</h2>
+    <svg width="500" height="375" viewBox="0 0 600 450">
+      <rect x="0" y="0" width="600" height="450" fill="#87CEEB" />
+      <circle cx="450" cy="60" r="35" fill="#FFD700" />
+      <rect x="0" y="320" width="600" height="130" fill="#4CAF50" />
 
-      <!-- Roof (path, triangle) -->
-      <path d="M -20 80 L 100 -20 L 220 80 Z" fill="#B7410E" stroke="#5C3317" stroke-width="2" />
+      <g transform="translate(100, 260)">
+        <rect x="-8" y="40" width="16" height="60" fill="#8B4513" />
+        <ellipse cx="0" cy="20" rx="45" ry="45" fill="#388E3C" />
+      </g>
 
-      <!-- Door -->
-      <rect x="85" y="150" width="40" height="80" fill="#5C3317" />
-      <circle cx="115" cy="190" r="3" fill="#FFD700" />
+      <g transform="translate(250, 150)">
+        <rect x="0" y="80" width="200" height="150" fill="#A0522D" stroke="#5C3317" stroke-width="2" />
+        <path d="M -20 80 L 100 -20 L 220 80 Z" fill="#8B0000" stroke="#5C3317" stroke-width="2" />
+        <rect x="85" y="150" width="40" height="80" fill="#3E2723" />
+        <circle cx="115" cy="190" r="3" fill="#FFD700" />
+        <rect x="20" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
+        <rect x="140" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
+        <path d="M 100 230 Q 90 280 60 320" stroke="#DDD" stroke-width="20" fill="none" />
+      </g>
 
-      <!-- Windows -->
-      <rect x="20" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
-      <rect x="140" y="110" width="40" height="40" fill="#B3E5FC" stroke="#5C3317" stroke-width="2" />
-
-      <!-- Path (walkway, curved) -->
-      <path d="M 100 230 Q 90 280 60 320" stroke="#DDD" stroke-width="20" fill="none" />
-    </g>
-
-    <!-- Label text -->
-    <text x="470" y="250" font-family="Arial" font-size="20" fill="#000000">House</text>
-  </svg>
+      <text x="470" y="250" font-family="Arial" font-size="20" fill="#000000">House</text>
+    </svg>
+  </div>
 
 </body>
 </html>
