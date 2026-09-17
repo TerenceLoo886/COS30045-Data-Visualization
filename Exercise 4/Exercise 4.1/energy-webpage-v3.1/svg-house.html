@@ -120,24 +120,25 @@
             <ellipse cx="0" cy="20" rx="45" ry="45" fill="#3CA83C" />
           </g>
 
-          <rect x="230" y="230" width="200" height="150" fill="#F5EFE0" stroke="#333" stroke-width="2" />
-          <polygon points="210,230 330,130 450,230" fill="#E24A33" stroke="#333" stroke-width="2" />
-          <rect x="380" y="150" width="30" height="60" fill="#8B4513" stroke="#333" stroke-width="1" />
-          <rect x="315" y="300" width="40" height="80" fill="#C0392B" />
+          <rect x="230" y="170" width="200" height="150" fill="#F5EFE0" stroke="#333" stroke-width="2" />
+          <polygon points="210,170 330,70 450,170" fill="#E24A33" stroke="#333" stroke-width="2" />
+          <rect x="380" y="90" width="30" height="80" fill="#8B4513" stroke="#333" stroke-width="1" />
+          <rect x="315" y="240" width="40" height="80" fill="#C0392B" />
 
           <g stroke="#333" stroke-width="2" fill="#AEDFF7">
-            <rect x="250" y="260" width="40" height="40" />
-            <rect x="370" y="260" width="40" height="40" />
+            <rect x="250" y="200" width="40" height="40" />
+            <rect x="370" y="200" width="40" height="40" />
           </g>
 
-          <line x1="270" y1="260" x2="270" y2="300" stroke="#333" stroke-width="2" />
-          <line x1="250" y1="280" x2="290" y2="280" stroke="#333" stroke-width="2" />
-          <line x1="390" y1="260" x2="390" y2="300" stroke="#333" stroke-width="2" />
-          <line x1="370" y1="280" x2="410" y2="280" stroke="#333" stroke-width="2" />
+          <line x1="270" y1="200" x2="270" y2="240" stroke="#333" stroke-width="2" />
+          <line x1="250" y1="220" x2="290" y2="220" stroke="#333" stroke-width="2" />
+          <line x1="390" y1="200" x2="390" y2="240" stroke="#333" stroke-width="2" />
+          <line x1="370" y1="220" x2="410" y2="220" stroke="#333" stroke-width="2" />
 
-          <path d="M 335 380 L 335 450" stroke="#999" stroke-width="26" fill="none" stroke-linecap="butt" />
+          <!-- Straight walkway, matches door width -->
+          <path d="M 335 320 L 335 450" stroke="#999" stroke-width="40" fill="none" stroke-linecap="butt" />
 
-          <text x="460" y="250" font-family="Arial" font-size="20" fill="#000000">My House</text>
+          <text x="460" y="190" font-family="Arial" font-size="20" fill="#000000">My House</text>
         </svg>
       </div>
 
@@ -154,24 +155,25 @@
             <ellipse cx="0" cy="20" rx="40" ry="40" fill="#2E7D32" />
           </g>
 
-          <rect x="250" y="240" width="200" height="150" fill="#F5EFE0" stroke="#333" stroke-width="2" />
-          <polygon points="230,240 350,140 470,240" fill="#2E5FA3" stroke="#333" stroke-width="2" />
-          <rect x="400" y="160" width="30" height="60" fill="#8B4513" stroke="#333" stroke-width="1" />
-          <rect x="335" y="310" width="40" height="80" fill="#8B0000" />
+          <rect x="250" y="170" width="200" height="150" fill="#F5EFE0" stroke="#333" stroke-width="2" />
+          <polygon points="230,170 350,70 470,170" fill="#2E5FA3" stroke="#333" stroke-width="2" />
+          <rect x="400" y="90" width="30" height="80" fill="#8B4513" stroke="#333" stroke-width="1" />
+          <rect x="335" y="240" width="40" height="80" fill="#8B0000" />
 
           <g stroke="#333" stroke-width="2" fill="#AEDFF7">
-            <rect x="270" y="270" width="40" height="40" />
-            <rect x="390" y="270" width="40" height="40" />
+            <rect x="270" y="200" width="40" height="40" />
+            <rect x="390" y="200" width="40" height="40" />
           </g>
 
-          <line x1="290" y1="270" x2="290" y2="310" stroke="#333" stroke-width="2" />
-          <line x1="270" y1="290" x2="310" y2="290" stroke="#333" stroke-width="2" />
-          <line x1="410" y1="270" x2="410" y2="310" stroke="#333" stroke-width="2" />
-          <line x1="390" y1="290" x2="430" y2="290" stroke="#333" stroke-width="2" />
+          <line x1="290" y1="200" x2="290" y2="240" stroke="#333" stroke-width="2" />
+          <line x1="270" y1="220" x2="310" y2="220" stroke="#333" stroke-width="2" />
+          <line x1="410" y1="200" x2="410" y2="240" stroke="#333" stroke-width="2" />
+          <line x1="390" y1="220" x2="430" y2="220" stroke="#333" stroke-width="2" />
 
-          <path d="M 355 390 C 320 410, 300 430, 320 450" stroke="#999" stroke-width="20" fill="none" stroke-linecap="butt" />
+          <!-- Curved walkway: 4-point cubic Bezier (start, control 1, control 2, end) forming an S-curve -->
+          <path d="M 355 320 C 260 360, 430 400, 335 450" stroke="#999" stroke-width="32" fill="none" stroke-linecap="butt" />
 
-          <text x="480" y="260" font-family="Arial" font-size="20" fill="#000000">My House</text>
+          <text x="480" y="190" font-family="Arial" font-size="20" fill="#000000">My House</text>
         </svg>
       </div>
     </div>
@@ -183,9 +185,10 @@
         Between the original and edited version, the house roof colour was changed from red to
         blue, the door was darkened to a deep red, and the tree was shifted slightly and coloured
         a deeper green. The sun was made smaller and moved to a new position in the sky, and the
-        whole house (including chimney, windows, and door) was repositioned as a unit. The
-        walkway was also changed from a straight path in the original to a curved path in the
-        edited version.
+        whole house (including chimney, windows, and door) was shifted slightly to the right. The
+        walkway was also changed from a straight path matching the door width in the original, to
+        a flowing S-shaped curve in the edited version, built using a cubic Bézier curve with two
+        control points pulling in opposite directions.
       </p>
     </div>
 
@@ -239,15 +242,15 @@
         </tr>
         <tr>
           <td>House body (&lt;rect&gt;)</td>
-          <td>x, y</td>
-          <td>230, 230</td>
-          <td>250, 240</td>
+          <td>x</td>
+          <td>230</td>
+          <td>250</td>
         </tr>
         <tr>
           <td>Walkway (&lt;path&gt;)</td>
-          <td>d</td>
-          <td>M 335 380 L 335 450 (straight)</td>
-          <td>M 355 390 C 320 410, 300 430, 320 450 (curved)</td>
+          <td>d, stroke-width</td>
+          <td>M 335 320 L 335 450, width 40 (straight)</td>
+          <td>M 355 320 C 260 360, 430 400, 335 450, width 32 (S-curve)</td>
         </tr>
       </tbody>
     </table>
