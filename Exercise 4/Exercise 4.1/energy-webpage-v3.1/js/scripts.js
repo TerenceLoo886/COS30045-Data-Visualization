@@ -92,11 +92,11 @@ const energyOutput = document.getElementById("energy-output");
 
 function estimateEnergy(inches) {
   if (inches <= 43) {
-    return 155 + ((inches - 20) / (43 - 20)) * 20;
+    return 158 + ((inches - 20) / (43 - 20)) * 20;
   } else if (inches <= 65) {
-    return 155 + ((inches - 43) / (65 - 43)) * (405 - 155);
+    return 158 + ((inches - 43) / (65 - 43)) * (403 - 158);
   } else {
-    return 405 + ((inches - 65) / (85 - 65)) * (745 - 405);
+    return 403 + ((inches - 65) / (85 - 65)) * (746 - 403);
   }
 }
 
