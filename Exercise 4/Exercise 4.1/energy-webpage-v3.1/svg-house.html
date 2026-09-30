@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .svg-page {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1.5rem;
     }
@@ -38,6 +38,8 @@
       border: 1px solid #ddd;
       border-radius: 6px;
       background-color: #fff;
+      max-width: 100%;
+      height: auto;
     }
     .description {
       max-width: 900px;
@@ -110,10 +112,10 @@
       <!-- BEFORE -->
       <div class="panel">
         <h2>Before</h2>
-        <svg width="420" height="340" viewBox="0 0 600 450">
-          <rect x="0" y="0" width="600" height="450" fill="#B8E3F0" />
+        <svg width="520" height="407" viewBox="0 0 600 470">
+          <rect x="0" y="0" width="600" height="470" fill="#B8E3F0" />
           <circle cx="500" cy="80" r="40" fill="#FFD700" />
-          <rect x="0" y="320" width="600" height="130" fill="#8CD98C" />
+          <rect x="0" y="320" width="600" height="150" fill="#8CD98C" />
 
           <g transform="translate(100, 260)">
             <rect x="-8" y="40" width="16" height="60" fill="#B5651D" />
@@ -123,7 +125,7 @@
           <rect x="230" y="170" width="200" height="150" fill="#F5EFE0" stroke="#333" stroke-width="2" />
           <polygon points="210,170 330,70 450,170" fill="#E24A33" stroke="#333" stroke-width="2" />
           <rect x="380" y="90" width="30" height="80" fill="#8B4513" stroke="#333" stroke-width="1" />
-          <rect x="315" y="240" width="40" height="80" fill="#C0392B" />
+          <rect x="310" y="240" width="40" height="80" fill="#C0392B" />
 
           <g stroke="#333" stroke-width="2" fill="#AEDFF7">
             <rect x="250" y="200" width="40" height="40" />
@@ -135,8 +137,8 @@
           <line x1="390" y1="200" x2="390" y2="240" stroke="#333" stroke-width="2" />
           <line x1="370" y1="220" x2="410" y2="220" stroke="#333" stroke-width="2" />
 
-          <!-- Straight walkway, matches door width -->
-          <path d="M 335 320 L 335 450" stroke="#999" stroke-width="40" fill="none" stroke-linecap="butt" />
+          <!-- Straight walkway: top edge matches the door (310-350), slight widening toward the viewer -->
+          <path d="M 310 320 L 350 320 L 365 470 L 295 470 Z" fill="#999999" />
 
           <text x="460" y="190" font-family="Arial" font-size="20" fill="#000000">My House</text>
         </svg>
@@ -145,10 +147,10 @@
       <!-- AFTER -->
       <div class="panel">
         <h2>After</h2>
-        <svg width="420" height="340" viewBox="0 0 600 450">
-          <rect x="0" y="0" width="600" height="450" fill="#B8E3F0" />
+        <svg width="520" height="407" viewBox="0 0 600 470">
+          <rect x="0" y="0" width="600" height="470" fill="#B8E3F0" />
           <circle cx="450" cy="60" r="35" fill="#FFD700" />
-          <rect x="0" y="320" width="600" height="130" fill="#8CD98C" />
+          <rect x="0" y="320" width="600" height="150" fill="#8CD98C" />
 
           <g transform="translate(80, 260)">
             <rect x="-8" y="40" width="16" height="60" fill="#B5651D" />
@@ -158,7 +160,7 @@
           <rect x="250" y="170" width="200" height="150" fill="#F5EFE0" stroke="#333" stroke-width="2" />
           <polygon points="230,170 350,70 470,170" fill="#2E5FA3" stroke="#333" stroke-width="2" />
           <rect x="400" y="90" width="30" height="80" fill="#8B4513" stroke="#333" stroke-width="1" />
-          <rect x="335" y="240" width="40" height="80" fill="#8B0000" />
+          <rect x="330" y="240" width="40" height="80" fill="#8B0000" />
 
           <g stroke="#333" stroke-width="2" fill="#AEDFF7">
             <rect x="270" y="200" width="40" height="40" />
@@ -170,8 +172,8 @@
           <line x1="410" y1="200" x2="410" y2="240" stroke="#333" stroke-width="2" />
           <line x1="390" y1="220" x2="430" y2="220" stroke="#333" stroke-width="2" />
 
-          <!-- Curved walkway: 4-point cubic Bezier (start, control 1, control 2, end) forming an S-curve -->
-          <path d="M 355 320 C 355 370, 280 390, 335 450" stroke="#999" stroke-width="32" fill="none" stroke-linecap="butt" />
+          <!-- Curved walkway: left edge curves, right edge repeats the same curve offset by the door width, so the path keeps its width -->
+          <path d="M 330 320 C 290 370, 330 420, 295 470 L 345 470 C 370 420, 330 370, 370 320 Z" fill="#999999" />
 
           <text x="480" y="190" font-family="Arial" font-size="20" fill="#000000">My House</text>
         </svg>
@@ -185,10 +187,10 @@
         Between the original and edited version, the house roof colour was changed from red to
         blue, the door was darkened to a deep red, and the tree was shifted slightly and coloured
         a deeper green. The sun was made smaller and moved to a new position in the sky, and the
-        whole house (including chimney, windows, and door) was shifted slightly to the right. The
-        walkway was also changed from a straight path matching the door width in the original, to
-        a flowing S-shaped curve in the edited version, built using a cubic Bézier curve with two
-        control points pulling in opposite directions.
+        whole house including chimney, windows and door was shifted slightly to the right. The
+        walkway was also changed from a straight-sided path in the original to a curved path in
+        the edited version. Both are drawn as filled shapes whose top edge is exactly the width
+        of the door, so the path stays attached to the doorway.
       </p>
     </div>
 
@@ -224,9 +226,9 @@
         </tr>
         <tr>
           <td>Door (&lt;rect&gt;)</td>
-          <td>fill</td>
-          <td>#C0392B</td>
-          <td>#8B0000</td>
+          <td>x, fill</td>
+          <td>310, #C0392B</td>
+          <td>330, #8B0000</td>
         </tr>
         <tr>
           <td>Tree leaves (&lt;ellipse&gt;)</td>
@@ -248,9 +250,9 @@
         </tr>
         <tr>
           <td>Walkway (&lt;path&gt;)</td>
-          <td>d, stroke-width</td>
-          <td>M 335 320 L 335 450, width 40 (straight)</td>
-          <td>M 355 320 C 260 360, 430 400, 335 450, width 32 (S-curve)</td>
+          <td>d</td>
+          <td>M 310 320 L 350 320 L 365 470 L 295 470 Z (straight)</td>
+          <td>M 330 320 C 290 370, 330 420, 295 470 L 345 470 C 370 420, 330 370, 370 320 Z (curved)</td>
         </tr>
       </tbody>
     </table>
