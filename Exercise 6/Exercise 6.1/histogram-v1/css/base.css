@@ -1,0 +1,58 @@
+:root {
+  --bg: #f5faf8;
+  --surface: #ffffff;
+  --dark: #0f3d3e;
+  --accent: #2ec4b6;
+  --warm: #ff6b6b;
+  --text: #1e2a2a;
+  --text-soft: #4b5d5a;
+  --border: #e1eae8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background-color: var(--bg);
+}
+
+/* Header: same dark band as the main site, title only (no nav needed here) */
+header {
+  background-color: var(--dark);
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+header h1 {
+  color: #eaf6f4;
+  font-size: 1.8rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main p {
+  color: var(--text-soft);
+  margin-top: 1rem;
+}
+main a {
+  color: var(--dark);
+  font-weight: bold;
+}
+main a:hover {
+  color: var(--accent);
+}
+
+footer {
+  background-color: var(--dark);
+  color: #cfe8e4;
+  text-align: center;
+  padding: 1.25rem;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}

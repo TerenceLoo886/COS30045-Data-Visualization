@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Energy Consumption</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/visualisation.css">
+</head>
+<body>
+  <header>
+    <h1>TV Energy Consumption</h1>
+  </header>
+
+  <main>
+    <div id="histogram" class="responsive-svg-container"></div>
+    <p>
+      Data source:
+      <a href="https://data.gov.au/data/dataset/energy-rating-for-household-appliances" target="_blank">
+        Energy Rating for Household Appliances
+      </a>
+      (Downloaded Jan 2026)
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; Terence Loo Data Visualisation Week 6</p>
+  </footer>
+
+  <!-- Order matters: D3 first, then the files that other files depend on -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/load-data.js"></script>
+  <script src="js/shared-constants.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/histogram.js"></script>
+</body>
+</html>

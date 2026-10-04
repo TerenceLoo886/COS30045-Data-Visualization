@@ -1,0 +1,16 @@
+/* Chart sits in a white card, same look as the story cards on the main site */
+.responsive-svg-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--surface);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 16px rgba(15, 61, 62, 0.06);
+}
+
+.responsive-svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
