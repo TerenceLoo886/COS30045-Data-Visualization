@@ -2,7 +2,7 @@
 let activeTech = "all";
 let activeSize = "all";
 
-// Steps 1 to 3 from the exercise: filter data, make new bins, redraw the bars
+// Exercise 6.2: filter data, make new bins, redraw the bars
 const updateHistogram = (data) => {
   // 1. Filter the data (a filter set to "all" lets everything through)
   const updatedData = data.filter(tv =>
@@ -12,6 +12,18 @@ const updateHistogram = (data) => {
 
   // 2. New bins from the filtered data (binGenerator is in shared-constants.js)
   const updatedBins = binGenerator(updatedData);
+
+  // Exercise 6.2 extension: rescale the y axis to fit the filtered bins
+  if (rescaleYAxis) {
+    // Math.max(1, ...) stops the scale collapsing when a filter combo has no TVs
+    const newMax = Math.max(1, d3.max(updatedBins, d => d.length));
+    yScale.domain([0, newMax]).nice();
+
+    d3.select("#histogram .y-axis")
+      .transition()
+      .duration(500)
+      .call(d3.axisLeft(yScale).tickFormat(d3.format(",")));
+  }
 
   // 3. Move the existing bars to their new heights with a transition
   d3.selectAll("#histogram rect")

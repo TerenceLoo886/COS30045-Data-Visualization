@@ -34,3 +34,5 @@ const filters_size = [
   { id: "65",  label: '65"',       isActive: false },
   { id: "98",  label: '98"',       isActive: false }
 ];
+// Exercise 6.2 extension: set to false to keep the histogram y axis fixed after filtering
+const rescaleYAxis = true;
