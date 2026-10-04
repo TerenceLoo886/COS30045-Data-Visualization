@@ -64,15 +64,22 @@
       <h2>D3 Chart (Exercise 4.7)</h2>
       <div class="responsive-svg-container"></div>
     </section>
+
+    <!-- Exercise 5.1: vertical bar chart. js/bar-chart.js draws into the div with id bar-chart -->
+    <section id="bar-chart-section">
+      <h2>Energy Use by Screen Type (55 inch TVs)</h2>
+      <div id="bar-chart"></div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> Terence Loo Wen Xuan.</p>
   </footer>
 
-  <!-- D3 must load before main.js, otherwise d3 is undefined -->
+  <!-- D3 must load before main.js and bar-chart.js, otherwise d3 is undefined -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/barchart.js"></script>
 </body>
 </html>

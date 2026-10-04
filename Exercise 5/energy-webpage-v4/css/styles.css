@@ -193,3 +193,20 @@ footer {
   width: 100%;
   max-width: 1200px;
 }
+
+/* Exercise 5.1: vertical bar chart */
+#bar-chart-section {
+  margin-top: 2.5rem;
+}
+
+#bar-chart {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#bar-chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
