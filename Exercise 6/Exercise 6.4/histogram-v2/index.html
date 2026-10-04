@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Energy Consumption</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/visualisation.css">
+</head>
+<body>
+  <header>
+    <h1>TV Energy Consumption</h1>
+  </header>
+
+  <main>
+    <!-- Exercise 6.2: filter buttons for screen type -->
+    <div id="filters_screen"></div>
+
+    <!-- Exercise 6.1: histogram container -->
+    <div id="histogram" class="responsive-svg-container"></div>
+
+    <!-- Exercise 6.2 extension: filter buttons for screen size -->
+    <div id="filters_size"></div>
+
+    <!-- Exercise 6.4 extension: filter buttons for the scatterplot -->
+    <div id="filters_scatter"></div>
+
+    <!-- Exercise 6.3: scatterplot container -->
+    <div id="scatterplot" class="responsive-svg-container"></div>
+
+    <p>
+      Data source:
+      <a href="https://data.gov.au/data/dataset/energy-rating-for-household-appliances" target="_blank">
+        Energy Rating for Household Appliances
+      </a>
+      (Downloaded Jan 2026)
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; Terence Loo Data Visualisation Week 6</p>
+  </footer>
+
+  <!-- Order matters: D3 first, then the files that other files depend on -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/load-data.js"></script>
+  <script src="js/shared-constants.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/histogram.js"></script>
+  <!-- Exercise 6.3: scatterplot script -->
+  <script src="js/scatterplot.js"></script>
+</body>
+</html>
